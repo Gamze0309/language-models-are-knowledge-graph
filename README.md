@@ -5,7 +5,8 @@ A non official reimplementation of [Language models are open knowledge graphs](h
 
 We used Stanza nlp in the match stage, cause Spacy nlp does not have Turkish language support.
 ## Entity linker for Map section
-We got help from [REL](https://github.com/informagi/REL) for this section
+We got help from [REL](https://github.com/informagi/REL) for this section.
+
 We have created a folder named wiki in wiki_data to extract Entity Disambiguation and Entity Linking. 
 
 ```
