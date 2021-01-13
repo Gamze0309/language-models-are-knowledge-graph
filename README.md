@@ -25,7 +25,7 @@ Run the following command inside the wiki file. This process takes a long time. 
 ```
 python wikiextractor/WikiExtractor.py ./trwiki-latest-pages-articles.xml.bz2 --links --filter_disambig_pages --processes 1 --bytes 1G
 ```
-## Extracting Wiki id and name mapping
+### Extracting Wiki id and name mapping
 Use [Wikimapper](https://github.com/jcklie/wikimapper#create-your-own-index) for Wiki id and name mapping. This package can be installed via `pip`
 ```
 pip install wikimapper
@@ -39,7 +39,7 @@ $ wikimapper create trwiki-latest --dumpdir data --target data/index_trwiki-late
 ```
 Last command provides a database for id name mapping. Run the db2txt code inside the wiki file to save them as a txt file.
 
-## Generate p(e|m) index
+#### Generate p(e|m) index
 Now that we have extracted the necessary data from our Wikipedia corpus, we may create the p(e|m) index. We instantiate a Wikipedia class that loads the wikipedia id/name mapping, disambiguation file.
 
 ```
@@ -54,15 +54,15 @@ wiki_freq = WikipediaFreq(base_url, wiki_version, wikipedia)
 wiki_freq.compute_wiki()
 wiki_freq.store()
 ```
-## Training Wikipedia2Vec embeddings
+### Training Wikipedia2Vec embeddings
 Training new embeddings is based on the [Wikipedia2Vec](https://wikipedia2vec.github.io/wikipedia2vec/) package. Please make sure that the Wikipedia dump is still zipped and thus has the extensions .xml.bz2. The two scripts are located in wiki_data/w2v. You first run preprocess.sh which requires you to enter the location of your Wikipedia dump. After this is done, you can run train.sh which will train a Wikipedia2Vec model and store it in the required word2vec format.
 
-# Execute MAMA(Match and Map) section
+## Execute MAMA(Match and Map) section
 First add files in the example folder in txt format for the input text and for the output text.
 ```
 $ python extract.py examples/ornek_metin.txt examples/ornek_cikti.txt
 ```
-# Environment setup
+## Environment setup
 This repo is run using virtualenv with conda
 ```
 $ conda create -n venv python=3.6.9
