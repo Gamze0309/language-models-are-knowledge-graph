@@ -1,4 +1,4 @@
-# languge-model-are-open-knowledge-graph-turkish
+# language-model-are-open-knowledge-graph-turkish
 Language models are open knowledge graphs
 
 A non official reimplementation of [Language models are open knowledge graphs](https://arxiv.org/abs/2010.11967)
