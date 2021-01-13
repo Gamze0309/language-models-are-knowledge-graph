@@ -16,11 +16,11 @@ We have created a folder named wiki in wiki_data to extract Entity Disambiguatio
 ### Extracting a Wikipedia dump
 For all Wikipedia database dumps: [Wikipedia dumps](https://dumps.wikimedia.org/). 
 
-The script is invoked with a Wikipedia dump file as an argument. Use the article dumps which are available as http://dumps.wikimedia.org/trwiki/latest/trwiki-latest-pages-articles.xml.bz2 for turkish language. This is provide `xml.bz2` files that need processing. This file must be inside the wiki folder.
+The script is invoked with a Wikipedia dump file as an argument. Use the article dumps which are available as http://dumps.wikimedia.org/trwiki/latest/trwiki-latest-pages-articles.xml.bz2 for turkish language. This is provide `xml.bz2` files that need processing. This file should be inside the wiki folder.
 
-A tool that does this is called [WikiExtractor](https://github.com/attardi/wikiextractor). This tool takes as an input a Wikipedia dump and spits out files that are required for our package. This folder must be inside the wiki folder.
+A tool that does this is called [WikiExtractor](https://github.com/attardi/wikiextractor). This tool takes as an input a Wikipedia dump and spits out files that are required for our package. This folder should be inside the wiki folder.
 
-Run the following command inside the wiki file. This process takes a long time. After that, wiki_disambiguation_pages.txt file is obtained. This file must be inside the wiki folder.
+Run the following command inside the wiki file. This process takes a long time. After that, wiki_disambiguation_pages.txt file is obtained. This file should be inside the wiki folder.
 
 ```
 python wikiextractor/WikiExtractor.py ./trwiki-latest-pages-articles.xml.bz2 --links --filter_disambig_pages --processes 1 --bytes 1G
@@ -55,7 +55,7 @@ wiki_freq.compute_wiki()
 wiki_freq.store()
 ```
 ### Training Wikipedia2Vec embeddings
-Training new embeddings is based on the [Wikipedia2Vec](https://wikipedia2vec.github.io/wikipedia2vec/) package. Please make sure that the Wikipedia dump is still zipped and thus has the extensions .xml.bz2. The two scripts are located in wiki_data/w2v. You first run preprocess.sh which requires you to enter the location of your Wikipedia dump. After this is done, you can run train.sh which will train a Wikipedia2Vec model and store it in the required word2vec format.
+Training new embeddings is based on the [Wikipedia2Vec](https://wikipedia2vec.github.io/wikipedia2vec/) package. Please make sure that the Wikipedia dump is still zipped and thus has the extensions .xml.bz2. The two scripts are located in wiki_data/w2v. You first run preprocess.sh which requires you to enter the location of your Wikipedia dump. After this is done, you can run train.sh which will train a Wikipedia2Vec model and store it in the required word2vec format. The file named wikipedia2vec_wv2vformat should be in the wiki folder
 
 ## Execute MAMA(Match and Map) section
 First add files in the example folder in txt format for the input text and for the output text.
