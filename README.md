@@ -37,7 +37,7 @@ $ wikimapper download trwiki-latest --dir data
 ```
 $ wikimapper create trwiki-latest --dumpdir data --target data/index_trwiki-latest.db
 ```
-Last command provides a database for id name mapping. Run the db2txt code inside the wiki file to save them as a txt file.
+Last command provides a database for id name mapping. Run the [db2txt](https://github.com/Gamze0309/language-models-are-knowledge-graph/blob/main/wiki_data/wiki/db2txt.py) code inside the wiki file to save them as a txt file.
 
 #### Generate p(e|m) index
 Now that we have extracted the necessary data from our Wikipedia corpus, we may create the p(e|m) index. We instantiate a Wikipedia class that loads the wikipedia id/name mapping, disambiguation file.
