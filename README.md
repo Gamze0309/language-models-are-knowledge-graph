@@ -4,6 +4,7 @@ Language models are open knowledge graphs
 A non official reimplementation of [Language models are open knowledge graphs](https://arxiv.org/abs/2010.11967)
 
 We used Stanza nlp in the match stage, cause Spacy nlp does not have Turkish language support.
+
 We got help from [Language models are open knowledge graphs in english](https://github.com/theblackcat102/language-models-are-knowledge-graphs-pytorch) for match stage.
 ## Entity linker for Map section
 We got help from [REL](https://github.com/informagi/REL) for this stage.
