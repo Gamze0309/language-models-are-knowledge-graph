@@ -5,9 +5,9 @@ A non official reimplementation of [Language models are open knowledge graphs](h
 
 We used Stanza nlp in the match stage, cause Spacy nlp does not have Turkish language support.
 
-We got help from [Language models are open knowledge graphs in english](https://github.com/theblackcat102/language-models-are-knowledge-graphs-pytorch) for match stage.
+We got help from [Language models are open knowledge graphs in english](https://github.com/theblackcat102/language-models-are-knowledge-graphs-pytorch) for Match stage.
 ## Entity linker for Map section
-We got help from [REL](https://github.com/informagi/REL) for this stage.
+We got help from [REL](https://github.com/informagi/REL) for Map stage.
 
 We have created a folder named wiki in wiki_data to extract Entity Disambiguation and Entity Linking. 
 
