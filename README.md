@@ -3,8 +3,9 @@ Language models are open knowledge graphs
 
 A non official reimplementation of [Language models are open knowledge graphs](https://arxiv.org/abs/2010.11967)
 
-We used stanza nlp in the match stage, cause Spacy nlp does not have Turkish language support.
+We used Stanza nlp in the match stage, cause Spacy nlp does not have Turkish language support.
 ## Entity linker for Map section
+We got help from [REL](https://github.com/informagi/REL) for this section
 We have created a folder named wiki in wiki_data to extract Entity Disambiguation and Entity Linking. 
 
 ```
